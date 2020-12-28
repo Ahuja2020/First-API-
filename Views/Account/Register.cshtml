@@ -1,0 +1,113 @@
+﻿@model WebAppAPI.Models.UserModel
+    @{
+    ViewBag.Title = "Register";
+}
+
+
+<fieldset>
+    <legend>
+         User Registration
+    </legend>
+    @using(Html.BeginForm("Register","Account",FormMethod.Post))
+    {
+    <table>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.FirstName)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.FirstName)
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            @Html.ValidationMessageFor(model => model.FirstName, null, new { @class = "text text-danger" })
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.Lastname)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.Lastname)
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            @Html.ValidationMessageFor(model => model.Lastname, null, new { @class = "text text-danger" })
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.Email)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.Email)
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text text-danger" })
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.Password)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.Password)
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text text-danger" })
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.ConfirmPassword)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.ConfirmPassword)
+        </td>
+
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            @Html.ValidationMessageFor(model => model.ConfirmPassword, null, new { @class = "text text-danger" })
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <input type="submit" value="Register" />
+                        </td>
+                        <td>
+                        <input type="reset" value="Reset" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+       
+        <td>
+            @Html.ValidationMessage("Error", null, new { @class = "text text-danger" });
+        </td>
+    </tr>
+
+</table>
+    }
+</fieldset>

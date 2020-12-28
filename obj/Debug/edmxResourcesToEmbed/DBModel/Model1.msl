@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CyberDBModelStoreContainer" CdmEntityContainer="CyberDBEntities">
+    <EntitySetMapping Name="tbl_Login">
+      <EntityTypeMapping TypeName="CyberDBModel.tbl_Login">
+        <MappingFragment StoreEntitySet="tbl_Login">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ArticleUser">
+      <EntityTypeMapping TypeName="CyberDBModel.tbl_ArticleUser">
+        <MappingFragment StoreEntitySet="tbl_ArticleUser">
+          <ScalarProperty Name="ArticleDes" ColumnName="ArticleDes" />
+          <ScalarProperty Name="ArticleTags" ColumnName="ArticleTags" />
+          <ScalarProperty Name="ArticleSubtitle" ColumnName="ArticleSubtitle" />
+          <ScalarProperty Name="ArticleTitle" ColumnName="ArticleTitle" />
+          <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
